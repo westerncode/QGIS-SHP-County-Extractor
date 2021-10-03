@@ -1,0 +1,278 @@
+def KMLCreatorFunction(layer,base_folder,State_Name,State_Number):
+
+    layer.selectByExpression('"STATEFP"='+State_Number)
+    os.mkdir(os.path.join(base_folder, State_Name))
+    fn =base_folder+State_Name+'/'+State_Name+'.KML'
+    writer  = QgsVectorFileWriter.writeAsVectorFormat(layer,fn, 'utf-8', \
+    driverName='KML', onlySelected = True)
+
+from qgis.core import QgsVectorFileWriter, QgsVectorLayer
+import os
+
+# Code is based off of "https://www.youtube.com/watch?v=dN2RHKYzJ0M&t"
+
+# First: download the "cb_2018_us_county_500k.zip" here: https://www.census.gov/geographies/mapping-files/time-series/geo/kml-cartographic-boundary-files.html
+# Second: open the Shape file in QGIS
+
+# Third: 
+# Designate the base folder to export in
+
+base_folder = "base folder location goes here"
+
+# Run the Code: 
+
+# Let's get the Layer
+layers = QgsProject.instance() .mapLayersByName('cb_2018_us_county_500k')
+layer = layers[0]
+
+# Go State by State
+
+# Alabama
+State_Number = "01"
+State_Name = "AL"
+KMLCreatorFunction(layer,base_folder,State_Name,State_Number)
+
+# Alaska
+State_Number = "02"
+State_Name = "AK"
+KMLCreatorFunction(layer,base_folder,State_Name,State_Number)
+
+# Arizona
+State_Number = "04"
+State_Name = "AZ"
+KMLCreatorFunction(layer,base_folder,State_Name,State_Number)
+
+# Arkansas
+State_Number = "05"
+State_Name = "AR"
+KMLCreatorFunction(layer,base_folder,State_Name,State_Number)
+
+# California
+State_Number = "06"
+State_Name = "CA"
+KMLCreatorFunction(layer,base_folder,State_Name,State_Number)
+
+# Colorado
+State_Number = "08"
+State_Name = "CO"
+KMLCreatorFunction(layer,base_folder,State_Name,State_Number)
+
+# Connecticut
+State_Number = "09"
+State_Name = "CT"
+KMLCreatorFunction(layer,base_folder,State_Name,State_Number)
+
+# Delaware
+State_Number = "10"
+State_Name = "DE"
+KMLCreatorFunction(layer,base_folder,State_Name,State_Number)
+
+# Florida
+State_Number = "12"
+State_Name = "FL"
+KMLCreatorFunction(layer,base_folder,State_Name,State_Number)
+
+# Georgia
+State_Number = "13"
+State_Name = "GA"
+KMLCreatorFunction(layer,base_folder,State_Name,State_Number)
+
+# Hawaii
+State_Number = "15"
+State_Name = "HI"
+KMLCreatorFunction(layer,base_folder,State_Name,State_Number)
+
+# Idaho
+State_Number = "16"
+State_Name = "ID"
+KMLCreatorFunction(layer,base_folder,State_Name,State_Number)
+
+# Illinois
+State_Number = "17"
+State_Name = "IL"
+KMLCreatorFunction(layer,base_folder,State_Name,State_Number)
+
+# Indiana
+State_Number = "18"
+State_Name = "IN"
+KMLCreatorFunction(layer,base_folder,State_Name,State_Number)
+
+# Iowa
+State_Number = "19"
+State_Name = "IA"
+KMLCreatorFunction(layer,base_folder,State_Name,State_Number)
+
+# Kansas
+State_Number = "20"
+State_Name = "KS"
+KMLCreatorFunction(layer,base_folder,State_Name,State_Number)
+
+# Kentucky
+State_Number = "21"
+State_Name = "KY"
+KMLCreatorFunction(layer,base_folder,State_Name,State_Number)
+
+# Louisiana
+State_Number = "22"
+State_Name = "LA"
+KMLCreatorFunction(layer,base_folder,State_Name,State_Number)
+
+# Maine
+State_Number = "23"
+State_Name = "ME"
+KMLCreatorFunction(layer,base_folder,State_Name,State_Number)
+
+# Maryland
+State_Number = "24"
+State_Name = "MD"
+KMLCreatorFunction(layer,base_folder,State_Name,State_Number)
+
+# Massachusetts
+State_Number = "25"
+State_Name = "MA"
+KMLCreatorFunction(layer,base_folder,State_Name,State_Number)
+
+# Michigan
+State_Number = "26"
+State_Name = "MI"
+KMLCreatorFunction(layer,base_folder,State_Name,State_Number)
+
+# Minnesota
+State_Number = "27"
+State_Name = "MN"
+KMLCreatorFunction(layer,base_folder,State_Name,State_Number)
+
+# Mississippi
+State_Number = "28"
+State_Name = "MS"
+KMLCreatorFunction(layer,base_folder,State_Name,State_Number)
+
+# Missouri
+State_Number = "29"
+State_Name = "MO"
+KMLCreatorFunction(layer,base_folder,State_Name,State_Number)
+
+# Montana
+State_Number = "30"
+State_Name = "MT"
+KMLCreatorFunction(layer,base_folder,State_Name,State_Number)
+
+# Nebraska
+State_Number = "31"
+State_Name = "NE"
+KMLCreatorFunction(layer,base_folder,State_Name,State_Number)
+
+# Nevada
+State_Number = "32"
+State_Name = "NV"
+KMLCreatorFunction(layer,base_folder,State_Name,State_Number)
+
+# New Hampshire
+State_Number = "33"
+State_Name = "NH"
+KMLCreatorFunction(layer,base_folder,State_Name,State_Number)
+
+# New Jersey
+State_Number = "34"
+State_Name = "NJ"
+KMLCreatorFunction(layer,base_folder,State_Name,State_Number)
+
+# New Mexico
+State_Number = "35"
+State_Name = "NM"
+KMLCreatorFunction(layer,base_folder,State_Name,State_Number)
+
+# New York
+State_Number = "36"
+State_Name = "NY"
+KMLCreatorFunction(layer,base_folder,State_Name,State_Number)
+
+# North Carolina
+State_Number = "37"
+State_Name = "NC"
+KMLCreatorFunction(layer,base_folder,State_Name,State_Number)
+
+# North Dakota
+State_Number = "38"
+State_Name = "ND"
+KMLCreatorFunction(layer,base_folder,State_Name,State_Number)
+
+# Ohio
+State_Number = "39"
+State_Name = "OH"
+KMLCreatorFunction(layer,base_folder,State_Name,State_Number)
+
+# Oklahoma
+State_Number = "40"
+State_Name = "OK"
+KMLCreatorFunction(layer,base_folder,State_Name,State_Number)
+
+# Oregon
+State_Number = "41"
+State_Name = "OR"
+KMLCreatorFunction(layer,base_folder,State_Name,State_Number)
+
+# Pennsylvania
+State_Number = "42"
+State_Name = "PA"
+KMLCreatorFunction(layer,base_folder,State_Name,State_Number)
+
+# Rhode Island
+State_Number = "44"
+State_Name = "RI"
+KMLCreatorFunction(layer,base_folder,State_Name,State_Number)
+
+# South Carolina
+State_Number = "45"
+State_Name = "SC"
+KMLCreatorFunction(layer,base_folder,State_Name,State_Number)
+
+# South Dakota
+State_Number = "46"
+State_Name = "SD"
+KMLCreatorFunction(layer,base_folder,State_Name,State_Number)
+
+# Tennessee
+State_Number = "47"
+State_Name = "TN"
+KMLCreatorFunction(layer,base_folder,State_Name,State_Number)
+
+# Texas
+State_Number = "48"
+State_Name = "TX"
+KMLCreatorFunction(layer,base_folder,State_Name,State_Number)
+
+# Utah
+State_Number = "49"
+State_Name = "UT"
+KMLCreatorFunction(layer,base_folder,State_Name,State_Number)
+
+# Vermont
+State_Number = "50"
+State_Name = "VT"
+KMLCreatorFunction(layer,base_folder,State_Name,State_Number)
+
+# Virginia
+State_Number = "51"
+State_Name = "VA"
+KMLCreatorFunction(layer,base_folder,State_Name,State_Number)
+
+# Washington
+State_Number = "53"
+State_Name = "WA"
+KMLCreatorFunction(layer,base_folder,State_Name,State_Number)
+
+# West Virginia
+State_Number = "54"
+State_Name = "WV"
+KMLCreatorFunction(layer,base_folder,State_Name,State_Number)
+
+# Wisconsin
+State_Number = "55"
+State_Name = "WI"
+KMLCreatorFunction(layer,base_folder,State_Name,State_Number)
+
+# Wyoming
+State_Number = "56"
+State_Name = "WY"
+KMLCreatorFunction(layer,base_folder,State_Name,State_Number)
